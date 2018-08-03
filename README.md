@@ -1,4 +1,4 @@
-# Windows container - Windows authentication in ASP.NET
+# Windows container - Containerizing legacy Full Framework IIS application
 
 ## What you will need
 
@@ -6,10 +6,21 @@
 - Visual studio 2017
 - Ask domain admin for a "Group Managed Service Accounts" (Steps 1 to 7)
 - Create a product table and populate with data [product.sql](/demo-scripts/product.sql)
-- Create Share folder and give read-write permission to the created service account in step 1 to 2. (Hint use **domain\serviceaccountname$** format while adding service account)
+- Create Share folder and give read-write permission to the created service account in step 1 to 2. (Hint use **domain\serviceaccountname$** format while adding service account). Create hello.text under shared folder.
 - Modify [Web.config](./DemoWebWinContainerFullFramework/DemoWebWinContainerFullFramework/Web.config)
   - testfilepath
   - connectionString
+
+## About DemoWebApp application
+
+- Is a default template ASP.NET, .NET Framework 4.7.1 using MVC and WebApi.
+
+## About DemoWebWinContainerFullFramework application
+
+- ASP.NET, .NET Framework 4.7.1, MVC and WebApi application using Windows authentication
+- Database connection using windows authentication
+- Read Write to the protected shared folder
+- Using [Microsoft.Configuration.ConfigurationBuilders.Environment](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Environment/) to overide application settings (requires .NET Framework 4.7.1)
 
 ### Build and publish "DemoWebApp" and "DemoWebWinContainerFullFramework" applications
 
