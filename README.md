@@ -105,7 +105,7 @@ Get-CredentialSpec
 ## 7. Run container
 
 ```powershell
-docker run -d -p 8000:80 -h gMSAContG  --security-opt "credentialspec=file://gMSAContG.json" --name sc sc
+docker run -d -p 8000:80 -h gMSAContG --security-opt "credentialspec=file://gMSAContG.json" --name sc sc
 ```
 
 ### Lookup container IP address
