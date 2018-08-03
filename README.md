@@ -1,6 +1,8 @@
-# Ref links
+# Windows container
 
-[Windows containers with an emulated domain identity](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/b1960f4da9731f85ddf672fa3cf956a313a78f5b/windows-server-container-tools/ServiceAccounts).
+## Reference links
+
+[Windows containers with an emulated domain identity](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/b1960f4da9731f85ddf672fa3cf956a313a78f5b/windows-server-container-tools/ServiceAccounts)
 
 [Setting up IIS with User Authorization in Windows Server containers - PatrickLang](https://gist.github.com/PatrickLang/27c743782fca17b19bf94490cbb6f960)
 
@@ -8,7 +10,7 @@
 
 [Active Directory Service Accounts for Windows Containers](https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/manage-serviceaccounts )
 
-[Create a Container with Active Directory Support (<https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/> )
+[Create a Container with Active Directory Support](<https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/> )
 
 ## 1. The domain needs a master root key
 
@@ -106,13 +108,13 @@ Get-CredentialSpec
 docker run -d -p 8000:80 -h gMSAContG  --security-opt "credentialspec=file://gMSAContG.json" --name sc sc
 ```
 
-#### Lookup iP and ping
+### Lookup iP and ping
 
 ```powershell
 docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sc
 ```
 
-#### Verify container running
+### Verify container running
 
 ```powershell
 docker exec -it [container-id] cmd
