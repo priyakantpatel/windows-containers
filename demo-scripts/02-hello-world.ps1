@@ -1,4 +1,5 @@
 # Hello World
+# iisreset /STOP
 docker version
 
 docker image pull microsoft/windowsservercore
