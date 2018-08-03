@@ -26,7 +26,7 @@
 
 ### Follow "02-hello-world.ps1" and "03-build-DemoWebApp.ps1"
 
-### Following swagger URL in the demo2 application and test all APIs
+### Follow swagger URL in the demo2 application and test all APIs
 
 ### Reference
 
