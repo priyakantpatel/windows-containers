@@ -11,7 +11,7 @@ namespace DemoWebWinContainerFullFramework.Controllers
 {
     public class FileIoController : ApiController
     {
-        //[Authorize]
+        [Authorize]
         [Route("fileiotest")]
         [System.Web.Http.HttpGet]
         public IHttpActionResult FileIoTest()
