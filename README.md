@@ -19,7 +19,7 @@
 
 ### Reference
 
-[Setup](https://github.com/docker/labs/tree/master/windows/windows-containers)
+[Install Windows container](https://github.com/docker/labs/tree/master/windows/windows-containers)
 
 [Windows containers with an emulated domain identity](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/b1960f4da9731f85ddf672fa3cf956a313a78f5b/windows-server-container-tools/ServiceAccounts)
 
