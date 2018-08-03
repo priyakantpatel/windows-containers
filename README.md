@@ -6,8 +6,8 @@
 - Visual studio 2017
 - Ask domain admin for a "Group Managed Service Accounts" (Steps 1 to 7)
 - Create a product table and populate with data [product.sql](/demo-scripts/product.sql)
-- Create Share folder and give read-write permission to the created service account in step 1 to 2. (Hint use domain\serviceaccountname$ format while adding service account)
-- Modify ".\DemoWebWinContainerFullFramework\DemoWebWinContainerFullFramework\Web.config"
+- Create Share folder and give read-write permission to the created service account in step 1 to 2. (Hint use **domain\serviceaccountname$** format while adding service account)
+- Modify [Web.config](./DemoWebWinContainerFullFramework/DemoWebWinContainerFullFramework/Web.config)
   - testfilepath
   - connectionString
 
