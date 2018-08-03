@@ -18,8 +18,8 @@ docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" demo1
 # docker rm -f [containerid]
 
 ## Verify CredentialSpec
-git clone https://github.com/MicrosoftDocs/Virtualization-Documentation.git
-Import-Module .\Virtualization-Documentation\windows-server-container-tools\ServiceAccounts\CredentialSpec.psm1
+Start-BitsTransfer https://raw.githubusercontent.com/MicrosoftDocs/Virtualization-Documentation/b1960f4da9731f85ddf672fa3cf956a313a78f5b/windows-server-container-tools/ServiceAccounts/CredentialSpec.psm1
+Import-Module ./CredentialSpec.psm1
 Get-CredentialSpec
 
 # run demo2 container (This test give you 401 error and fail)
