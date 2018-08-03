@@ -57,6 +57,7 @@ New-ADGroup -GroupCategory Security -DisplayName "mycontainerhosts" -Name mycont
 
 ```powershell
 Add-ADGroupMember -Identity mycontainerhosts -Members (Get-ADComputer -Identity doc-cli-srv16)
+# "doc-cli-srv16" replace with your machine name
 ```
 
 ### Verify group members
