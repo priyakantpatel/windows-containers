@@ -1,6 +1,25 @@
-# Windows container
+# Windows container - Windows authentication in ASP.NET
 
-## Reference links
+## What you will need
+
+- Windows 10 or Windows server 2016
+- Visual studio 2017
+- Ask domain admin for a "Group Managed Service Accounts" (Steps 1 to 7)
+- Create a product table and populate with data [product.sql](/demo-scripts/product.sql)
+- Create Share folder and give read-write permission to the created service account in step 1 to 2. (Hint use domain\serviceaccountname$ format while adding service account)
+- Modify ".\DemoWebWinContainerFullFramework\DemoWebWinContainerFullFramework\Web.config"
+  - testfilepath
+  - connectionString
+
+## Build and publish "DemoWebApp" and "DemoWebWinContainerFullFramework" applications
+
+## Follow "02-hello-world.ps1" and "03-build-DemoWebApp.ps1"
+
+## Following swagger URL in the demo2 application and test all APIs
+
+## Reference
+
+[Setup](https://github.com/docker/labs/tree/master/windows/windows-containers)
 
 [Windows containers with an emulated domain identity](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/b1960f4da9731f85ddf672fa3cf956a313a78f5b/windows-server-container-tools/ServiceAccounts)
 
@@ -105,13 +124,13 @@ Get-CredentialSpec
 ## 7. Run container
 
 ```powershell
-docker run -d -p 8000:80 -h gMSAContG --security-opt "credentialspec=file://gMSAContG.json" --name sc sc
+docker run -d -p 8000:80 -h gMSAContG --security-opt "credentialspec=file://gMSAContG.json" --name NAME NAME
 ```
 
 ### Lookup container IP address
 
 ```powershell
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sc
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" NAME
 ```
 
 ### Verify
