@@ -29,7 +29,7 @@ Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))
 ### Create group
 
 ```powershell
-New-ADGroup -GroupCategory Security -DisplayName "My Container Hosts" -Name mycontainerhosts -GroupScope Universal
+New-ADGroup -GroupCategory Security -DisplayName "mycontainerhosts" -Name mycontainerhosts -GroupScope Universal
 ```
 
 ### Assign hosts/node-computers
