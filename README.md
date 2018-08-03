@@ -40,7 +40,7 @@ New-ADGroup -GroupCategory Security -DisplayName "mycontainerhosts" -Name mycont
 Add-ADGroupMember -Identity mycontainerhosts -Members (Get-ADComputer -Identity doc-cli-srv16)
 ```
 
-### Verify
+### Verify group members
 
 ```powershell
 Get-ADGroupMember "mycontainerhosts"
@@ -108,13 +108,13 @@ Get-CredentialSpec
 docker run -d -p 8000:80 -h gMSAContG  --security-opt "credentialspec=file://gMSAContG.json" --name sc sc
 ```
 
-### Lookup iP and ping
+### Lookup container IP address
 
 ```powershell
 docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sc
 ```
 
-### Verify container running
+### Verify
 
 ```powershell
 docker exec -it [container-id] cmd
