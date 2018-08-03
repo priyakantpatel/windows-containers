@@ -11,13 +11,13 @@
   - testfilepath
   - connectionString
 
-## Build and publish "DemoWebApp" and "DemoWebWinContainerFullFramework" applications
+### Build and publish "DemoWebApp" and "DemoWebWinContainerFullFramework" applications
 
-## Follow "02-hello-world.ps1" and "03-build-DemoWebApp.ps1"
+### Follow "02-hello-world.ps1" and "03-build-DemoWebApp.ps1"
 
-## Following swagger URL in the demo2 application and test all APIs
+### Following swagger URL in the demo2 application and test all APIs
 
-## Reference
+### Reference
 
 [Setup](https://github.com/docker/labs/tree/master/windows/windows-containers)
 
