@@ -133,6 +133,12 @@ New-CredentialSpec -Name gMSAContG -AccountName gMSAContG
 Get-CredentialSpec
 ```
 
+### Install credentail Spec
+
+```powershell
+mv gMSAContG.json $env:ProgramData\docker\credentialspecs\gMSAContG.json
+```
+
 ## 7. Run container
 
 ```powershell
